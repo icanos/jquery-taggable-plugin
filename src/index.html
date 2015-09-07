@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" class="coming-soon">
+<head>
+    <meta charset="utf-8">
+    <title>Taggable search example</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta name="description" content="">
+    <meta name="author" content="Marcus Westin">
+
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700' rel='stylesheet' type='text/css'>
+
+    <style type="text/css">
+    body,input {
+      font-family: "Source Sans Pro"
+    }
+
+    .form-control {
+      width: 100%;
+      border: 1px solid #ccc;
+      /*padding: 6px;*/
+      -moz-box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      font-size: 14px;
+    }
+    </style>
+
+</head>
+
+<body class="focused-form">
+  <div style="width: 30%; float: left;">
+    <input type="text" name="asd" class="form-control taggable" />
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi metus nisi, pellentesque semper varius quis, feugiat eu erat. Cras venenatis sem sit amet fermentum venenatis. Phasellus rhoncus ut felis eu auctor. Sed finibus, metus nec efficitur elementum, nisl tortor scelerisque libero, vel finibus purus arcu at metus. Proin scelerisque finibus vestibulum. Aliquam aliquet quis felis id consequat. Maecenas molestie auctor tellus, vel elementum magna tempus sit amet. Nunc nec iaculis ligula. Donec et mattis arcu. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec non eleifend libero. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+    </p>
+    <p>
+      Sed fermentum arcu elit, vel ultrices sapien sagittis id. Morbi et mollis est. Maecenas varius viverra tempor. Praesent ut facilisis nunc, eget molestie libero. Praesent eget eros eu sem lacinia ultricies non ac augue. Curabitur consectetur elementum turpis. Etiam augue augue, eleifend id sodales nec, viverra nec quam. Praesent eget dignissim libero. Fusce dapibus sapien ac quam posuere, at dignissim ex lacinia. Donec faucibus quis diam in iaculis. Aliquam sagittis lectus at eros sodales dapibus.
+    </p>
+  </div>
+  <div style="width: 30%; float: left;">
+    <input type="button" name="search" value="Search" id="searchBtn" />
+  </div>
+
+  <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+  <script type="text/javascript" src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+  <script type="text/javascript" src="js/jquery.taggable-plugin.js"></script>
+  <link href="css/jquery.taggable-plugin.css" type="text/css" rel="stylesheet">
+
+  <script type="text/javascript">
+  $(document).ready(function() {
+    var taggable = $('.taggable').taggable({
+      elementName: 'searchQuery',
+      attributes: ["Server Name", "Server Alias", "CPU", "RAM", "Location"],
+      onSearch: function (searchQuery) {
+        console.log(searchQuery);
+      }
+    });
+
+    $('#searchBtn').click(function() {
+      taggable.search();
+    });
+
+    taggable.focus();
+  });
+  </script>
+
+</body>
+</html>

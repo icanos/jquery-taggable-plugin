@@ -1,0 +1,80 @@
+.taggable {
+  cursor: text;
+  min-height: 32px;
+  display: inline-block;
+}
+
+.taggable-selected {
+  background-color: #eee !important;
+  font-weight: bold;
+}
+
+.taggable-tag, .taggable-value, .taggable-pair {
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+  padding: 0px 4px 0px 4px;
+  margin: 5px;
+  margin-right: 2px;
+  display: inline-block;
+  float: left;
+}
+
+.taggable-value {
+    border: 0;
+    background-color: transparent;
+    padding-top: 1px;
+    padding-left: 1px;
+}
+
+.taggable-pair {
+  background-color: #fafafa;
+  border: 1px solid #f1f1f1;
+  margin: 2px;
+  padding: 0px;
+}
+
+.taggable-pair > .taggable-tag, .taggable-value {
+  margin: 2px;
+}
+
+.taggable-input {
+  min-height: 14px;
+  min-width: 10px;
+  display: inline-block;
+  padding: 6px;
+  float: left;
+  outline: none;
+}
+
+.taggable-container {
+  position: relative;
+}
+
+.taggable-auto-complete {
+  border: 1px solid #ccc;
+  border-top: 0;
+  width: 100%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  position: absolute;
+  z-index: 1059;
+  background-color: #fff;
+}
+
+.taggable-auto-complete ul {
+  margin: 0;
+  padding: 0;
+}
+
+.taggable-auto-complete ul li {
+  background-color: #fff;
+  padding: 6px;
+  margin: 0;
+  list-style-type: none;
+}
+
+.taggable-auto-complete ul li:hover {
+  background-color: #f1f1f1;
+  cursor: pointer;
+}
